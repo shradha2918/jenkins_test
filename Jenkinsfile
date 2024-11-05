@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'linux'
-    }
+    agent any
 
 
     tools {
@@ -36,6 +34,9 @@ pipeline {
             }
         }
  stage('print') {
+     agent {
+                label 'linux'
+            }
             steps {
                 sh "echo testing"
             }
