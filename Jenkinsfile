@@ -32,6 +32,10 @@ pipeline {
                 junit 'api-gateway/target/surefire-reports/*.xml'
             }
         }
-
+ stage('print') {
+            steps {
+                sh "echo testing"
+            }
+        }
     }
 }
